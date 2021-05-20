@@ -6,4 +6,7 @@ def check_for_bet(raffle, bet):
 
 
 def assign_bet(raffle, bet):
-    return models.Chance.objects.create(selection=bet, raffle=raffle)
+    c = models.Chance(selection=bet, raffle=raffle)
+    c.save()
+    return c
+    #return models.Chance.objects.create(selection=bet, raffle=raffle)

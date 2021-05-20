@@ -14,7 +14,9 @@ class Raffle(models.Model):
 
 class Chance(models.Model):
     """A number or bet a person chooses for a raffle."""
+    id = models.IntegerField(primary_key=True)
     selection = models.IntegerField()
     raffle = models.ForeignKey(Raffle, on_delete=models.CASCADE, null=False)
+    created_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 

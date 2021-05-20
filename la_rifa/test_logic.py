@@ -5,5 +5,5 @@ from unittest import TestCase
 
 
 class Test(TestCase):
-    def test_assign_bet(self):
+    def test_just_approve(self):
         self.assertTrue(True)
