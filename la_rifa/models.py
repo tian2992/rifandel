@@ -8,6 +8,7 @@ class Chance(models.Model):
     selection = models.IntegerField()
     user = models.User()
 
+
 class Raffle(models.Model):
     name = models.CharField()
 
